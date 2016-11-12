@@ -64,9 +64,9 @@
     this.appendChild(document.importNode(this._template.content, true));
     this.frame = this.querySelector('#frame');
     this.log = this.querySelector('#log');
-    this.strategy = this.strategies.minimum;
     this.attributeChangedCallback('runs', null, this.getAttribute('runs') || 25);
     this.attributeChangedCallback('base', null, this.getAttribute('base') || '');
+    this.attributeChangedCallback('strategy', null, this.getAttribute('strategy') || 'minimum');
     window.addEventListener('message', this.scoreMessage.bind(this));
   }
 
