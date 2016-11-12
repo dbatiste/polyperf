@@ -79,7 +79,10 @@
         this.base = value;
         break;
       case 'strategy':
-        this.strategy = this.strategies[strategy] || this.strategy;
+        var strategy = this.strategies[value];
+        if (strategy) {
+          this.strategy = strategy || this.strategy;
+        }
         break;
     }
   };
