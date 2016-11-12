@@ -22,6 +22,12 @@ The tests are run by `runner.html`, which defines the list of tests to run. Edit
 <frame-tester runs="25"></frame-tester>
 ```
 
+By default, the `frame-tester` reports the minumum observed run duration, however this can be configured to report the mean duration within one standard deviation:
+
+```
+<frame-tester strategy="onedev"></frame-tester>
+```
+
 There are two different ways to configure your tests:
 
 ### Using the harness
